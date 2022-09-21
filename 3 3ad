@@ -1,0 +1,37 @@
+
+#include <stdio.h>  
+#include <math.h>   
+
+int main (void)
+{    
+
+    double floatNum, intNum, a, b, c;
+    int i = 0;
+    
+    printf("1 ");
+    scanf("%lf", &a);
+    printf("2 ");
+    scanf("%lf", &b);
+    printf("3 ");
+    scanf("%lf", &c);
+
+    floatNum = modf (a, &intNum);
+    if (floatNum != 0) {
+        i++;
+    }
+   
+    floatNum = modf (b, &intNum);
+    if (floatNum != 0) {
+        i++;
+    }
+    
+    floatNum = modf (c, &intNum);
+    if (floatNum != 0) {
+        i++;
+    }
+    
+    printf("%d", i);
+    
+    
+    return 0;
+}
