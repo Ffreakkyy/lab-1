@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char month[1024]; 
+    printf("введите месяц ");
+    scanf("%s", month); 
+    
+   
+    void SetDayCount (char expected[1024], int Days) {
+        if(strlen(month) == strlen(expected)) { 
+            int i = 0;
+            while (i < strlen(month)) { 
+                if ( month[i] == expected[i] ) { 
+                    if (i == strlen(month) - 1) { 
+                        printf("%d", Days);
+                    }
+                }
+               else {
+                   break; //преждевременный выход из цикла
+               }
+                i++;
+            }
+        }
+    } //
+    
+    //P.S. тут говнокод лень делать через массив)
+    
+    //ожидаемые ответы (массивы char)
+    char January[1024] = "january";
+    char February[1024] = "february";
+    char March[1024] = "march";
+    char April[1024] = "april";
+    char May[1024] = "may";
+    char June[1024] = "june";
+    char July[1024] = "july";
+    char August[1024] = "august";
+    char September[1024] = "september";
+    char October[1024] = "october";
+    char November[1024] = "november";
+    char December[1024] = "december";
+    
+    //вызовы функций с параметром в виде разных месяцов и дней
+    SetDayCount(January, 31);
+    SetDayCount(February, 28);
+    SetDayCount(March, 31);
+    SetDayCount(April, 30);
+    SetDayCount(May, 31);
+    SetDayCount(June, 30);
+    SetDayCount(July, 31);
+    SetDayCount(August, 31);
+    SetDayCount(September, 30);
+    SetDayCount(October, 31);
+    SetDayCount(November, 30);
+    SetDayCount(December, 31);
+
+    return 0;
+}
