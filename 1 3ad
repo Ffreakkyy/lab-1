@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+ double a, b, c, t;
+scanf("%lf", &a);
+scanf("%lf", &b);
+c =(a + b)/2;
+printf("отве1т: %lf\n", c);
+t=sqrtl(a*b);
+printf("ответ2:%lf\n",t);
+    return 0;
+}
