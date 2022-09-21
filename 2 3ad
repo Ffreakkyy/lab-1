@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+ double r, d, b,a;
+ printf("введите радиус");
+ 
+scanf("%lf", &r);
+printf("введите сторону квадрата");
+scanf("%lf", &b);
+d =2*r;
+a=d/sqrtl(2);
+if (a>=b){printf("ответ:да");
+
+}
+else {
+    printf("ответ:нет");
+}
+return 0;
+}
